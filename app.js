@@ -1,5 +1,7 @@
+const { urlencoded } = require("express");
 const express = require("express");
 const mongoose = require("mongoose");
+const articleRouter = require("./routes/article");
 
 
 require("dotenv").config();
@@ -15,6 +17,17 @@ mongoose.connect(process.env.DB_URI, {
 
 
 app.set("view engine", "ejs")
+app.use((req, res, next)=>{
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, UPDATE, DELETE, ");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization");
+    next();
+})
+app.use(express.json())
+app.use(urlencoded({extended: false}))
+app.use("/publics", express.static(__dirname + "/views/publics"))
+app.use("/articles", articleRouter)
+app.get("/article", (req, res) => res.redirect("/articles"));
 
 app.get("/", (req, res) => {
     res.render("index")

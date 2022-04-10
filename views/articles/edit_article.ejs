@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/publics/styles/bootstrap.css">
+    <link rel="stylesheet" href="/publics/styles/main.css">
+    
+    <title>Edit article</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit article</h1>
+        <h2 class="text-muted"><%= article.title %></h2>
+
+        <form id="edit-form" action="" class="edit-form" method="post">
+            <div class="form-group">
+                <input 
+                    id="title"
+                    type="text" 
+                    class="form-control" 
+                    placeholder="Title" 
+                    name="title"
+                >
+            </div>
+    
+            <div class="form-group">
+                <textarea 
+                    id="description"
+                    maxlength="100" 
+                    class="form-control" 
+                    placeholder="Description (max: 100 chars)" 
+                    name="description" 
+                    ></textarea>
+            </div>
+    
+            <div class="form-group">
+                <textarea 
+                    id="contentMarkdown"
+                    maxlength="1000" 
+                    class="form-control" 
+                    placeholder="Markdown (max: 1000 chars...)" 
+                    name="contentMarkdown" 
+                    ></textarea>
+            </div>
+
+            <div class="row">
+                <div class="col mx-5">
+                    <a href="/articles">
+                        <div type="" class="btn btn-secondary col" value="Cancel">
+                            Cancel
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col mx-5">
+                    <input type="submit" class="btn btn-success col" value="Edit" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let id = "<%= article._id %>";
+        let title = "<%= article.title %>";
+        let description = "<%= article.description %>";
+        let content = "<%= article.contentMarkdown %>";
+
+        let titleInput = document.getElementById("title");
+        let descriptionInput = document.getElementById("description");
+        let contentInput = document.getElementById("contentMarkdown");
+        
+
+        titleInput.value = title;
+        descriptionInput.value = description;
+        contentInput.value =  content;
+
+        let form = document.getElementById("edit-form")
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            form.action = "/articles/edit/" + id;
+
+            form.submit()
+        })
+    </script>
+</body>
+</html>

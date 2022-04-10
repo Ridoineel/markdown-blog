@@ -1,0 +1,42 @@
+
+.edit-form  textarea, 
+.add-form textarea{
+    min-height: 50px;
+    max-height: 400px;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+.btn {
+    transition: all ease-out 0.1s;
+}
+
+.btn:hover {
+    scale: 1.03;
+    transform: rotate(1deg);
+}
+
+.prewious-btn {
+    transition: all ease-in 0.1s;
+    width: fit-content;
+    border-radius: 45%;
+    padding: 0 5px 0 5px;
+    color: #0088ff;
+}
+
+.prewious-btn:hover {
+    background-color: #0088ff;
+    color: white
+}
+
+.article-header {
+    position: relative;
+}
+
+.article-edit-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
