@@ -9,8 +9,9 @@ a, a:hover {
     text-decoration: none;
 }
 
-.btn {
+.btn, button {
     transition: all ease-out 0.1s;
+    font-family: monospace;
 }
 
 .btn:hover {
