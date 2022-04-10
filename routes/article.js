@@ -112,6 +112,19 @@ router.get("/:article_id", async (req, res) => {
     }
 })
 
+router.delete("/a:article_id", async (req, res) => {
+    let article_id = req.params.article_id
+    let article;
+
+    try {
+        article = await Article.deleteOne({_id: article_id})
+    } catch (error) {
+        console.log(error)
+    }
+
+    res.redirect("/articles");
+})
+
 
 
 
