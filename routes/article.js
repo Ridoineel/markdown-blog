@@ -2,7 +2,6 @@ const router = require("express").Router();
 const Article = require("../models/article")
 const {markdownToHtml} = require("../utils/functions");
 
-
 router.get("/", async (req, res) => {
     let articles;
 
@@ -62,7 +61,7 @@ router.get("/edit/:article_id?", async (req, res) => {
     
 })
 
-router.post("/edit/:article_id", async (req, res) => {
+router.put("/edit/:article_id", async (req, res) => {
     let article_id = req.params.article_id;
     let {title, description, contentMarkdown} = req.body;
     let data = {}

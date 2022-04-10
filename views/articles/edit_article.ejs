@@ -14,7 +14,7 @@
         <h1>Edit article</h1>
         <h2 class="text-muted"><%= article.title %></h2>
 
-        <form id="edit-form" action="" class="edit-form" method="post">
+        <form action="/articles/edit/<%= article._id %>?_method=PUT" class="edit-form" method="POST">
             <div class="form-group">
                 <input 
                     id="title"
@@ -75,16 +75,6 @@
         titleInput.value = title;
         descriptionInput.value = description;
         contentInput.value =  content;
-
-        let form = document.getElementById("edit-form")
-
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            form.action = "/articles/edit/" + id;
-
-            form.submit()
-        })
     </script>
 </body>
 </html>

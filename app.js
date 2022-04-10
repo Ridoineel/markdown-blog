@@ -1,7 +1,9 @@
 const { urlencoded } = require("express");
 const express = require("express");
 const mongoose = require("mongoose");
+const methodOverride = require("method-override")
 const articleRouter = require("./routes/article");
+const { use } = require("marked");
 
 
 require("dotenv").config();
@@ -24,6 +26,7 @@ app.use((req, res, next)=>{
     next();
 })
 app.use(express.json())
+app.use(methodOverride("_method"))
 app.use(urlencoded({extended: false}))
 app.use("/publics", express.static(__dirname + "/views/publics"))
 app.use("/articles", articleRouter)
