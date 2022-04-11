@@ -16,13 +16,13 @@ Make with ***Node.js*** and ***MongoDB***
 ## clone repository
 
 ```bash
-git clone https://github.com/ridoineel/markadown-app
+git clone https://github.com/ridoineel/markadown-blog
 ```
 
 ## ...
 
 ```bash
-cd markdown-app
+cd markdown-blog
 npm install # install dependencies
 node app # run app
 ```
