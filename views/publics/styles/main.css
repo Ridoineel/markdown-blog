@@ -33,6 +33,11 @@ a, a:hover {
     color: white !important;
 }
 
+
+.add-btn:hover {
+    transform: rotate(180deg);
+}
+
 .article-header {
     position: relative;
 }
