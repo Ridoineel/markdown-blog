@@ -17,54 +17,48 @@
             </button>
         </a>
 
-        <% articles.map((article) => { %>
-            
-            <div class="card my-4 p-3" id="ll">
-                <!-- <a href="/articles/<%= article.id %>" class="stretched-link"></a> -->
-                <h2 class="card-title"><%= article.title %></h2>
+        <div class="row mt-3">
+            <% articles.map((article) => { %>
                 
-                
-                <div class="card-body">
-                    <p class="text-muted">Author: 
-                        <span class="font-weight-bold">
-                            <%= article.author %>
-                        </span> <br />
-                        <%= article.createAt.toLocaleString()  %>
-                    </p>
-    
-                    <div class="card-text mb-2 py-1">
-                        <%= article.description %>
-                    </div>
-
-                    <div class="row">
-                        <a href="/articles/<%= article.id %>">
-                            <button class="btn btn-success mx-1">
-                                Read More
-                            </button>
-                        </a>
-                        <a href="/articles/edit/<%= article.id %>">
-                            <button class="btn btn-primary mx-1">
-                                Edit 
-                            </button>
-                        </a>
+                <div class="card article-card   " id="ll">
+                    <!-- <a href="/articles/<%= article.id %>" class="stretched-link"></a> -->
+                    <h2 class="card-title"><%= article.title %></h2>
+                    
+                    
+                    <div class="card-body">
+                        <p class="text-muted">Author: 
+                            <span class="font-weight-bold">
+                                <%= article.author %>
+                            </span> <br />
+                            <%= article.createAt.toLocaleString()  %>
+                        </p>
         
-                        <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
-                            <button class="btn btn-danger mx-1">
-                                Delete
-                            </button>
-                        </form>
-                    </div>
-    
-                   
-                </div>
-            </div>
-        <% }) %>
-    </div>
+                        <div class="card-text mb-2 py-1">
+                            <%= article.description %>
+                        </div>
 
-    <script>
-        function deleteArticle(article_id) {
-            alert("deletion on article id:" + article_id)
-        }
-    </script>
+                        <div class="row">
+                            <a href="/articles/<%= article.id %>">
+                                <button class="btn btn-success mx-1">
+                                    Read More
+                                </button>
+                            </a>
+                            <a href="/articles/edit/<%= article.id %>">
+                                <button class="btn btn-primary mx-1">
+                                    Edit 
+                                </button>
+                            </a>
+            
+                            <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-danger mx-1">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
 </body>
 </html>

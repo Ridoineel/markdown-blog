@@ -1,9 +1,10 @@
 
-.edit-form  textarea, 
-.add-form textarea{
+form[class*=form] textarea {
     min-height: 50px;
     max-height: 400px;
 }
+
+
 
 a, a:hover {
     text-decoration: none;
@@ -24,12 +25,12 @@ a, a:hover {
     width: fit-content;
     border-radius: 45%;
     padding: 0 5px 0 5px;
-    color: #0088ff;
+    color: #0088ff !important;
 }
 
 .prewious-btn:hover {
     background-color: #0088ff;
-    color: white
+    color: white !important;
 }
 
 .article-header {
@@ -40,4 +41,17 @@ a, a:hover {
     position: absolute;
     top: 10px;
     right: 10px;
+}
+
+.article-card {
+    width: 48%;
+    margin: 0 1% 10px 1%;
+}
+
+@media all and (max-width: 1000px) {
+    .article-card {
+        width: 100%;
+        margin: none;
+        margin-bottom: 10px;
+    }
 }
