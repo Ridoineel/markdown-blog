@@ -20,9 +20,9 @@
         <div class="row mt-3">
             <% articles.map((article) => { %>
                 
-                <div class="card article-card   " id="ll">
+                <div class="article-card bg-fade shadow-3d-sm" id="ll">
                     <!-- <a href="/articles/<%= article.id %>" class="stretched-link"></a> -->
-                    <h2 class="card-title"><%= article.title %></h2>
+                    <h2 class="article-card-title"><%= article.title %></h2>
                     
                     
                     <div class="card-body">
@@ -39,19 +39,19 @@
 
                         <div class="row">
                             <a href="/articles/<%= article.id %>">
-                                <button class="btn btn-success mx-1">
+                                <button class="btn read-more-btn mx-1">
                                     Read More
                                 </button>
                             </a>
                             <a href="/articles/edit/<%= article.id %>">
-                                <button class="btn btn-primary mx-1">
+                                <button class="btn btn-primary edit-btn mx-1">
                                     Edit 
                                 </button>
                             </a>
             
                             <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
-                                <button class="btn btn-danger mx-1">
-                                    Delete
+                                <button class="btn btn-danger delete-btn mx-1">
+                                    x
                                 </button>
                             </form>
                         </div>

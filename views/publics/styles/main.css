@@ -1,10 +1,19 @@
+:root {
+    --color-primary: #00a1a8;
+}
 
 form[class*=form] textarea {
     min-height: 50px;
     max-height: 400px;
 }
 
+.shadow-3d-sm {
+    box-shadow: 0 0  10px #ccc;
+}
 
+.bg-fade {
+    background: #f5fffb !important;
+}
 
 a, a:hover {
     text-decoration: none;
@@ -18,9 +27,12 @@ a, a:hover {
 .btn:hover {
     scale: 1.03;
     transform: rotate(1deg);
+    color: white;
 }
 
 .prewious-btn {
+    font-size: 1.6em !important;
+    font-weight: bold;
     transition: all ease-in 0.1s;
     width: fit-content;
     border-radius: 45%;
@@ -40,17 +52,53 @@ a, a:hover {
 
 .article-header {
     position: relative;
+    margin-bottom: 20px;
 }
 
-.article-edit-btn {
+.edit-btn {
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
 .article-card {
+    position: relative;
     width: 48%;
     margin: 0 1% 10px 1%;
+
+    border-radius: 10px;
+
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.article-card-title {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus {
+    color: white;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.read-more-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.read-more-btn:hover {
+    color: var(--color-primary);
+}
+
+.delete-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
 @media all and (max-width: 1000px) {
