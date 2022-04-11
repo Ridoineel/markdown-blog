@@ -58,19 +58,14 @@
     </div>
 
     <script>
-        let id = "<%= article._id %>";
-        let title = "<%= article.title %>";
-        let description = "<%= article.description %>";
-        let content = "<%= article.contentMarkdown %>";
-
         let titleInput = document.getElementById("title");
         let descriptionInput = document.getElementById("description");
         let contentInput = document.getElementById("contentMarkdown");
+ 
+        titleInput.value = "<%= article.title %>";
+        descriptionInput.value = "<%= article.description %>";
+        contentInput.value =  "<%= article.contentMarkdown %>";
         
-
-        titleInput.value = title;
-        descriptionInput.value = description;
-        contentInput.value =  content;
     </script>
 </body>
 </html>
