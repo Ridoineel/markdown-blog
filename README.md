@@ -2,7 +2,14 @@
 
 Make with ***Node.js*** and ***MongoDB***
 
-![markdown blog](/assets/images/mb-ui.gif)
+### Add new article
+![markdown blog](/utils/assets/images/add.png)
+
+### Check articles list
+![markdown blog](/utils/assets/images/art.png)
+
+### Read article
+![markdown blog](/utils/assets/images/more.png)
 
 # To run this project
 
