@@ -11,18 +11,17 @@
 
         <form action="" class="add-form" method="POST">
             <div class="form-group">
-                <span class="text-danger">*</span>
                 <input 
                     id="author"
                     type="text" 
                     class="form-control" 
-                    placeholder="Author" 
+                    placeholder="Author"
                     name="author"
                     required 
                 >
             </div>
-            
-            <%- include("../components/form_fields") %>
+
+            <%- include("../components/form_fields", add_form=true) %>
         </form>
     </div>
     

@@ -11,7 +11,7 @@
         <h2 class="text-muted"><%= article.title %></h2>
 
         <form action="/articles/edit/<%= article._id %>?_method=PUT" class="edit-form" method="POST">
-            <%- include("../components/form_fields") %>
+            <%- include("../components/form_fields", add_form=false) %>
         </form>
     </div>
 

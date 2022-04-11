@@ -2,9 +2,18 @@
     --color-primary: #00a1a8;
 }
 
-form[class*=form] textarea {
+/* form first textarea */
+#description {
     min-height: 50px;
-    max-height: 400px;
+    max-height: 100px;
+}
+
+/* form last textarea */
+#contentMarkdown {
+    height: 48vh;
+    min-height: 100px;
+    max-height: 48vh;
+
 }
 
 .shadow-3d-sm {
