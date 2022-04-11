@@ -33,7 +33,7 @@ app.use("/articles", articleRouter)
 app.get("/article", (req, res) => res.redirect("/articles"));
 
 app.get("/", (req, res) => {
-    res.render("index")
+    res.redirect("/articles")
 })
 
 app.listen(port=process.env.PORT || 8080, () => {
