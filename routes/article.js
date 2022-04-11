@@ -112,7 +112,7 @@ router.get("/:article_id", async (req, res) => {
     }
 })
 
-router.delete("/a:article_id", async (req, res) => {
+router.delete("/:article_id", async (req, res) => {
     let article_id = req.params.article_id
     let article;
 
