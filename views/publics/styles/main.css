@@ -19,6 +19,8 @@ a, a:hover {
     text-decoration: none;
 }
 
+
+
 .btn, button {
     transition: all ease-out 0.1s;
     font-family: monospace;
@@ -37,11 +39,11 @@ a, a:hover {
     width: fit-content;
     border-radius: 45%;
     padding: 0 5px 0 5px;
-    color: #0088ff !important;
+    color:  var(--color-primary) !important;
 }
 
 .prewious-btn:hover {
-    background-color: #0088ff;
+    background-color: var(--color-primary);
     color: white !important;
 }
 
@@ -77,10 +79,10 @@ a, a:hover {
     font-weight: 500;
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary:focus {
-    color: white;
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
+.btn-primary {
+    color: white !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
 }
 
 .read-more-btn {
