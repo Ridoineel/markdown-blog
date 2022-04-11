@@ -1,7 +1,6 @@
 const createDomPurify = require("dompurify");
 const { JSDOM } = require("jsdom");
 const {marked} = require("marked");
-const slugify = require("slugify")
 
 const dompurify = createDomPurify(new JSDOM().window);
 
