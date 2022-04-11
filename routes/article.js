@@ -7,6 +7,9 @@ router.get("/", async (req, res) => {
 
     try {
         articles = await Article.find()
+
+        // sort by date in descending order
+        articles.sort((a, b) => b.createAt - a.createAt)
     } catch (error) {
         console.log(error)
     }
@@ -26,14 +29,12 @@ router.post("/add", async (req, res) => {
 
         try {
             await article.save()
-            res.redirect("/articles/" + article._id)
         }catch (err) {
             console.log(err)
-            res.redirect("/articles")
         }        
-    }else {
-        res.redirect("/articles")
     }
+
+    res.redirect("/articles")
 })
 
 router.get("/edit/:article_id?", async (req, res) => {
@@ -52,16 +53,12 @@ router.get("/edit/:article_id?", async (req, res) => {
         console.log(error)
         res.redirect("/articles")
     }
-
-    
 })
 
 router.put("/edit/:article_id", async (req, res) => {
     let article_id = req.params.article_id;
     let {title, description, contentMarkdown} = req.body;
     let data = {}
-
-    console.log(req.body)
 
     if (title) 
         data["title"] = title;
@@ -119,8 +116,6 @@ router.delete("/:article_id", async (req, res) => {
 
     res.redirect("/articles");
 })
-
-
 
 
 module.exports = router;
