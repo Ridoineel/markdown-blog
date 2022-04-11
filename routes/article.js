@@ -19,15 +19,10 @@ router.get("/add", (req, res) => {
 })
 
 router.post("/add", async (req, res) => {
-    let {title, description, content, author} = req.body;
+    let {title, description, contentMarkdown, author} = req.body;
 
-    if (title && description && content && author) {
-        let article = new Article({
-            title: title,
-            author: author,
-            contentMarkdown: content,
-            description: description
-        })
+    if (title && description && contentMarkdown && author) {
+        let article = new Article({title, description, contentMarkdown, author})
 
         try {
             await article.save()

@@ -11,49 +11,7 @@
         <h2 class="text-muted"><%= article.title %></h2>
 
         <form action="/articles/edit/<%= article._id %>?_method=PUT" class="edit-form" method="POST">
-            <div class="form-group">
-                <input 
-                    id="title"
-                    type="text" 
-                    class="form-control" 
-                    placeholder="Title" 
-                    name="title"
-                >
-            </div>
-    
-            <div class="form-group">
-                <textarea 
-                    id="description"
-                    maxlength="100" 
-                    class="form-control" 
-                    placeholder="Description (max: 100 chars)" 
-                    name="description" 
-                    ></textarea>
-            </div>
-    
-            <div class="form-group">
-                <textarea 
-                    id="contentMarkdown"
-                    maxlength="1000" 
-                    class="form-control" 
-                    placeholder="Markdown (max: 1000 chars...)" 
-                    name="contentMarkdown" 
-                    ></textarea>
-            </div>
-
-            <div class="row">
-                <div class="col text-center">
-                    <a href="/articles">
-                        <div type="" class="btn btn-secondary col-12 col-md-8" value="Cancel">
-                            Cancel
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="col text-center">
-                    <input type="submit" class="btn btn-success col-12 col-md-8" value="Edit" />
-                </div>
-            </div>
+            <%- include("../components/form_fields") %>
         </form>
     </div>
 
