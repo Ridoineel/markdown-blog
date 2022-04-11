@@ -1,6 +1,6 @@
 # Markdown Blog
 
-Make with ***Node.js*** and ***MongoDB***
+Made with ***Node.js*** and ***MongoDB***
 
 ### Add new article
 ![markdown blog](/utils/assets/images/add.png)
