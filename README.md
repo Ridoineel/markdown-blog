@@ -16,7 +16,7 @@ Made with ***Node.js*** and ***MongoDB***
 ## clone repository
 
 ```bash
-git clone https://github.com/ridoineel/markadown-blog
+git clone https://github.com/ridoineel/markdown-blog
 ```
 
 ## ...
