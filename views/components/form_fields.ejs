@@ -5,6 +5,7 @@
         class="form-control" 
         placeholder="Title" 
         name="title"
+        value="<%= add_form ? "" : title %>"
         <% if (add_form == true ) {%>
             required
         <% } %>
@@ -20,7 +21,7 @@
         name="description" 
         <% if (add_form == true ) {%>
             required
-        <% } %> ></textarea>
+        <% } %> ><%= add_form ? "" : description %></textarea>
 </div>
 
 <div class="form-group">
@@ -32,7 +33,7 @@
         name="contentMarkdown" 
         <% if (add_form == true ) {%>
             required
-        <% } %> ></textarea>
+        <% } %> ><%= add_form ? "" : content %></textarea>
 </div>
 
 <div class="row">

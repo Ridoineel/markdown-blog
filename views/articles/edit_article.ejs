@@ -11,19 +11,13 @@
         <h2 class="text-muted"><%= article.title %></h2>
 
         <form action="/articles/edit/<%= article._id %>?_method=PUT" class="edit-form" method="POST">
-            <%- include("../components/form_fields", add_form=false) %>
+            <%- include("../components/form_fields", 
+                add_form=false, 
+                title=article.title, 
+                description=article.description,
+                content=article.contentMarkdown
+            ) %>
         </form>
     </div>
-
-    <script>
-        let titleInput = document.getElementById("title");
-        let descriptionInput = document.getElementById("description");
-        let contentInput = document.getElementById("contentMarkdown");
- 
-        titleInput.value = "<%= article.title %>";
-        descriptionInput.value = "<%= article.description %>";
-        contentInput.value =  "<%= article.contentMarkdown %>";
-        
-    </script>
 </body>
 </html>
