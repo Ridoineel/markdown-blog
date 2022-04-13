@@ -2,9 +2,9 @@
 
 Made with ***Node.js*** and ***MongoDB***
 
-> Online demo [Markdblog](https://markdblog.herokuapp.com)
-> All user can be create, read, edit and delete articles,
-> It's just for previous and test
+> Online demo [Markdblog](https://markdblog.herokuapp.com) <br />
+> All user can be create, read, edit and delete articles, <br />
+> It's just for preview and test.
 
 ### Add new article
 ![markdown blog](/utils/assets/images/add.png)
