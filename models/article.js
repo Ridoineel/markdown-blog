@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const mongooseUniqueValidator = require("mongoose-unique-validator");
 
 const articleSchema = mongoose.Schema({
-    title: {type: String, required: true, unique: true},
+    title: {type: String, required: true},
     description: {type: String, required: false},
     contentMarkdown: {type: String, required: true},
     author: {type: String, required: true},
