@@ -19,12 +19,14 @@ mongoose.connect(process.env.DB_URI, {
 
 
 app.set("view engine", "ejs")
+/*
 app.use((req, res, next)=>{
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, UPDATE, DELETE, ");
     res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization");
     next();
 })
+*/
 app.use(express.json())
 app.use(methodOverride("_method"))
 app.use(urlencoded({extended: false}))
