@@ -2,6 +2,15 @@ const router = require("express").Router();
 const Article = require("../models/article")
 const {markdownToHtml} = require("../utils/functions");
 
+
+// definition of capitalize property on String
+Object.defineProperty(String.prototype, 'capitalize', {
+  value: function() {
+    return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase();
+  },
+  enumerable: false
+});
+
 router.get("/", async (req, res) => {
     let articles;
 
@@ -24,7 +33,12 @@ router.get("/add", (req, res) => {
 router.post("/add", async (req, res) => {
     let {title, description, contentMarkdown, author} = req.body;
 
+
+
     if (title && description && contentMarkdown && author) {
+        title = title.capitalize()
+        author = author.capitalize()
+        
         let article = new Article({title, description, contentMarkdown, author})
 
         try {
