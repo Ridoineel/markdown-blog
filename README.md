@@ -3,6 +3,8 @@
 Made with ***Node.js*** and ***MongoDB***
 
 > Online demo [Markdblog](https://markdblog.herokuapp.com)
+> All user can be create, read, edit and delete articles,
+> It's just for previous and test
 
 ### Add new article
 ![markdown blog](/utils/assets/images/add.png)
